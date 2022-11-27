@@ -1,0 +1,142 @@
+
+body {
+    background-color: #ffffff;
+    font-weight: 500;
+    font-size: 16px;
+    color: #ffffff;
+    padding: 0;
+    margin: 0;
+    -webkit-font-smoothing: antialiased;
+    -webkit-overflow-scrolling: touch;
+}
+
+.h2 {
+    margin-top: 50px;
+    margin-bottom: 50px;
+    font-size: 36px;
+    text-align: center;
+    
+}
+
+
+/** header **/
+
+.navbar {
+    height: 60px;
+    background-color: #000;
+}
+
+.nav-item {
+    padding-right: 40px;
+}
+
+a.nav-link {
+    color: white;
+}
+
+.navbar-nav .dropdown-menu{
+    background-color: #000;
+}
+
+.navbar-nav .dropdown-menu .dropdown-item{
+    color: rgb(255, 255, 255);
+    background-color: #000;
+}
+
+.parallax-header {
+    background: #000;
+    background: linear-gradient(
+            rgb(0, 0, 0, 0.3),
+            rgb(0, 0, 0, 0.8)
+        ),
+        url(/img/header.jpg);
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.header-home {
+    width: 100%;
+    height: 100vh;
+    background-image: url(/img/header.jpg);
+    background-size: cover;
+    position: relative;
+}
+
+.header-title {
+    text-align: center;
+}
+
+.nav-title {
+    color: #ffffff;
+    font-size: 60px;
+    margin-bottom: 60px;
+    letter-spacing: 0.1em;
+}
+
+.nav-title_subtitle {
+    color: #ffffff;
+    font-size: 26px;
+}
+
+.header-bottom {
+    margin-top: 60px;   
+}
+
+.header-bottom .btn {
+    background: yellow;
+    border-radius: 80px;
+    color: #000;
+    font-weight: 500;
+    font-size: 18px;
+}
+
+.header-bottom .btn:hover {
+    background: rgba(217, 255, 0, 0.938);
+}
+
+
+/** header end**/
+
+
+/** sectio one **/
+
+#headrewrap {
+    background: url(/img/sectionone.png) no-repeat center top;
+    margin-top: -10px;
+    padding-top: 20px;
+    text-align: center;
+    background-attachment: relative;
+    background-position: center center;
+    min-height: 600px;
+    width: 100%;
+}
+
+.title {
+    margin-top: 350px;
+}
+.subtitle {
+    color: #ffffff;
+    font-size: 36px;
+}
+.text {
+    color: #ffffff;
+    letter-spacing: 0.2em;
+}
+
+/** sectio one and **/
+
+.img-fluid {
+    width: 432px;
+    margin-bottom: 50px;
+}
+
+.nav-title-title {
+    font-size: 36px;
+    margin-bottom: 19px;
+}
+
+.nav-text {
+    font-size: 20px;
+}
