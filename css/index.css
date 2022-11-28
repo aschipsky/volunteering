@@ -1,22 +1,13 @@
 
-body {
-    background-color: #ffffff;
-    font-weight: 500;
-    font-size: 16px;
-    color: #ffffff;
-    padding: 0;
-    margin: 0;
-    -webkit-font-smoothing: antialiased;
-    -webkit-overflow-scrolling: touch;
+
+.title {
+    font-size: 60px;
+    text-align: center;
+    margin-bottom: 50px;
+    margin-top: 50px;
 }
 
-.h2 {
-    margin-top: 50px;
-    margin-bottom: 50px;
-    font-size: 36px;
-    text-align: center;
-    
-}
+
 
 
 /** header **/
@@ -100,8 +91,6 @@ a.nav-link {
 /** header end**/
 
 
-/** sectio one **/
-
 #headrewrap {
     background: url(/img/sectionone.png) no-repeat center top;
     margin-top: -10px;
@@ -113,7 +102,7 @@ a.nav-link {
     width: 100%;
 }
 
-.title {
+.text-start {
     margin-top: 350px;
 }
 .subtitle {
@@ -125,7 +114,6 @@ a.nav-link {
     letter-spacing: 0.2em;
 }
 
-/** sectio one and **/
 
 .img-fluid {
     width: 432px;
@@ -139,4 +127,26 @@ a.nav-link {
 
 .nav-text {
     font-size: 20px;
+}
+
+.row .card {
+    padding-left: 0;
+    padding-right: 0;
+    margin-left: 100px;
+    margin-bottom: 80px;
+    margin-top: 80px;
+    --bs-card-border-width:var(--bs-card-border-width)
+}
+
+.project_img{
+    width: 30px;
+    margin-right: 10px;
+}
+
+.benefist_block {
+    margin-bottom: 40px;
+}
+
+.benefist_icons {
+    width: 121px;
 }
