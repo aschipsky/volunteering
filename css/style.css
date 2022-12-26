@@ -62,9 +62,7 @@ h2 {
     background: yellow;
 }
 
-.navbar .coneine .navbar-brand .dropdown-menu {
-    text-align: center;
-}
+
 
 /** header **/
 
@@ -92,6 +90,19 @@ a.nav-link:hover {
 .navbar-nav .dropdown-menu .dropdown-item{
     color: rgb(255, 255, 255);
     background-color: #000;
+    text-align: center;
+}
+
+.navbar-toggler:hover {
+    background-color: yellow;
+}
+
+.navbar-toggler-icon {
+    background-color: yellow;
+}
+
+.navbar-toggler .collapsed {
+    background-color: yellow;
 }
 
 .parallax-header {
