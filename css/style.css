@@ -193,6 +193,12 @@ button.navbar-toggler .collapsed {
     width: 100%;
 }
 
+@media only screen and (max-width: 768px) {
+    #headrewrap {
+        background: url(/img/sectionone.png);
+    }
+}
+
 .text-start {
     display: flex;
     flex-direction: column;
