@@ -32,10 +32,9 @@ a:hover, a:focus {
 }
 
 h2 {
-    border-bottom: 2px solid rgb(0, 0, 0);
     padding-bottom: 15px;
     font-weight: normal;
-    border-bottom: double;
+    border-bottom: 1px double #3276e778;
 }
 
 .card .btn {
@@ -140,7 +139,7 @@ button.navbar-toggler .collapsed {
 .nav-title {
     color: #ffffff;
     font-size: 60px;
-    margin-bottom: 60px;
+    margin-bottom: 20px;
     letter-spacing: 0.1em;
 }
 
@@ -159,6 +158,7 @@ button.navbar-toggler .collapsed {
 .nav-title_subtitle {
     color: #ffffff;
     font-size: 26px;
+    border: none;
 }
 
 .header-bottom {
