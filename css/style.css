@@ -14,6 +14,8 @@ h1, h2, h3, h4, h5, h6 {
     color: rgb(0, 0, 0);
 }
 
+
+
 .a {
     color: white;
     text-decoration: none;
@@ -35,6 +37,52 @@ h2 {
     padding-bottom: 15px;
     font-weight: normal;
     border-bottom: 1px double #3276e778;
+}
+
+.upward {
+    position: fixed;
+    bottom: 10px;
+    right: 6px;
+    width: 50px;
+    height: 50px;
+    background-size: cover;
+    cursor: pointer;
+    visibility: hidden;
+    opacity: 0;
+    z-index: 1;
+    transition: 0.5s;
+    border-color: transparent;
+    border-radius: 50%;
+    background-color: #00000085;
+}
+.upward.active {
+    visibility: visible;
+    opacity: 1;
+}
+
+.upward::before,
+.upward::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.upward::before {
+    width: 5px;
+    height: 25px;
+    border-top-left-radius: 2px;
+    border-top-right-radius: 2px;
+    background-color: #ffffff;
+}
+
+.upward::after {
+    width: 19px;
+    height: 19px;
+    transform: translate(-50%, -50%) rotate(45deg);
+    border-top: 4px solid #ffffff;
+    border-left: 4px solid #ffffff;
 }
 
 .card .btn {
@@ -91,6 +139,14 @@ a.nav-link:hover {
     color: rgb(255, 255, 255);
     background-color: #3276e778;
     text-align: center;
+}
+
+.navbar-toggler:focus {
+    color: yellow;
+}
+
+button.navbar-toggler {
+    background-color: yellow;
 }
 
 .navbar-toggler:hover {
@@ -177,6 +233,15 @@ button.navbar-toggler .collapsed {
 
 .header-bottom .btn:hover {
     background: rgba(217, 255, 0, 0.938);
+}
+
+select {
+    appearance: none;
+    border: none;
+    background-color: transparent;
+    outline: none;
+    padding: 2px 4px 2px 4px;
+    font-weight: bold;
 }
 
 /** header end**/
@@ -343,6 +408,11 @@ button.navbar-toggler .collapsed {
     display: flex;
     justify-content: center;
     color: #ffffff;
+}
+
+.footer-title a {
+    color: white;
+    text-decoration: none;
 }
 
 /** foter end **/
