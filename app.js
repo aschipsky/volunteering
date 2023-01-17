@@ -42,4 +42,4 @@ function changeLanguage() {
     }
 }
 
-changeLanguage();
+//changeLanguage();

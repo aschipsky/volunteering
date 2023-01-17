@@ -244,7 +244,22 @@ select {
     font-weight: bold;
 }
 
-/** header end**/
+form .card {
+    background-color: transparent!important;
+    color: white!important;
+    margin-bottom: 50px;
+}
+
+.card input {
+    margin-bottom: 10px;
+}
+
+.help-container .card {
+    background: hsla(0,0%,93%,.56)!important;
+    height: fit-content;
+}
+
+    /** header end**/
 
 #headrewrap {
     background: url(/img/mother-motherland-monument-sunset-kiev-ukraine.jpeg) no-repeat center top;
