@@ -168,8 +168,8 @@ const langArr = {
         "en" : "Volunteering in Kremenets",
     },
     "card-title_three" : {
-        "ua" : "ПВГО Сокіл Кременець",
-        "en" : "PVGO Sokil Kremenets",
+        "ua" : "ПВГО “Сокіл” Кременець",
+        "en" : "PVGO “Sokil” Kremenets",
     },
     "card-text_five" : {
         "ua" : "Організація національно-патріотичного виховання молоді та спортивно-шкільних заходів. Волонтерство. Особистісний розвиток.",
@@ -180,12 +180,12 @@ const langArr = {
         "en" : "More details",
     },
     "card-title_four" : {
-        "ua" : "Волонтерський центр Джура",
-        "en" : "Volunteer Center Jura",
+        "ua" : "Волонтерський центр “Джура”",
+        "en" : "Volunteer Center “Jura”",
     },
     "card-text_six" : {
-        "ua" : "Загалом цей фонд забезпечує українських воїнів засобами зв’язку, оптичними пристроями, дронами та БПЛА, транспортом та засобами тактичної медицини.",
-        "en" : "",
+        "ua" : "Волонтерський центр “Джура” у Кременці, щодня із початку війни приймають допомогу від мешканців громади для воїнів та територіальної оборони.",
+        "en" : "The volunteer center “Jura” in Kremenets has been accepting help from community residents for soldiers and territorial defense every day since the beginning of the war.",
     },
     "buttom_six" : {
         "ua" : "Детальніше",
