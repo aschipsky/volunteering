@@ -43,4 +43,4 @@ function changeLanguage() {
     }
 }
 
-changeLanguage();
+//changeLanguage();

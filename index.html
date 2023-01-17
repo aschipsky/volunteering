@@ -65,15 +65,47 @@
         </div>
       </header>
 
-
       <section id="headrewrap">
         <div class="container">
           <div class="text-start">
             <h3 class="lng-subtitle subtitle">Допомагай тим, що найкраще вмієш</h3>
             <p class="lng-text_one text">У зв'язку з російським вторгненням в Україну, Волонтерська Платформа обʼєднала 400 тисяч українців довкола, щоб допомоги Україні під час війни.</p>
+              <form class="container" id="contactForm">
+                  <div class="card">
+                      <div class="card-body">
+                          <div class="form-group">
+                              <label>Заголовок:</label>
+                              <input required type="text" class="form-control" id="title" placeholder="Вкажіть Заголовок">
+                          </div>
+                          <div class="form-group">
+                              <label>Текст*:</label>
+                              <textarea required type="text" class="form-control" id="desc" placeholder="Інформація, яку потрібно надати: як ви можете допомогти, або що потребуєте (бажано вказувати інформацію лаконічно та чітко: наприклад, необхідно зібрати 15 пар чобіт для тероборони)"></textarea>
+                          </div>
+                          <div class="form-group">
+                              <label>Локація:</label>
+                              <input required type="text" class="form-control" id="location" placeholder="Локація">
+                          </div>
+                          <div class="form-group">
+                              <label>Звʼязатися:</label>
+                              <input required type="text" class="form-control" id="name" placeholder="Імʼя">
+                              <input required type="text" class="form-control" id="phone" placeholder="Контактний номер">
+                          </div>
+                      </div>
+                      <button type="submit" class="btn btn-primary"
+                              style="margin-left: 15px; margin-top: 10px">
+                           Відправити
+                      </button>
+                  </div>
+              </form>
           </div>
         </div>
       </section>
+
+    <div class="container">
+        <div class="row help-container justify-content-start">
+            <!--Products are dynamically generated here-->
+        </div>
+    </div>
 
       <section>
         <div class="container">
@@ -242,10 +274,97 @@
         </div>
       </footer>
 
-      <div class="upward" onClick="scrollTopTop()"></div>
+    <div class="upward" onClick="scrollTopTop()"></div>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
+
     <script src="lang.js"></script>
     <script src="app.js"></script>
+
+    <script type="module">
+      // Import the functions you need from the SDKs you need
+      import { initializeApp } from "https://www.gstatic.com/firebasejs/9.15.0/firebase-app.js";
+      import { getDatabase, ref, set, get } from "https://www.gstatic.com/firebasejs/9.15.0/firebase-database.js";
+      // TODO: Add SDKs for Firebase products that you want to use
+      // https://firebase.google.com/docs/web/setup#available-libraries
+
+      // Your web app's Firebase configuration
+      // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+      const firebaseConfig = {
+        apiKey: "AIzaSyBQYF4PqZx-SI5P8k1UDGXXxWAUU5pJu6U",
+        authDomain: "volonteering-platform.firebaseapp.com",
+        databaseURL: "https://volonteering-platform-default-rtdb.europe-west1.firebasedatabase.app",
+        projectId: "volonteering-platform",
+        storageBucket: "volonteering-platform.appspot.com",
+        messagingSenderId: "76229252246",
+        appId: "1:76229252246:web:e92b7e87d885290f255eb7",
+        measurementId: "G-XLXHXJD447"
+      };
+
+      // Initialize Firebase
+      const app = initializeApp(firebaseConfig);
+
+      const messagesRef = getDatabase(app);
+
+      document.getElementById('contactForm').addEventListener('submit', submitForm);
+
+      function submitForm(e) {
+        e.preventDefault();
+        const name = getInputVal('name');
+        const title = getInputVal('title');
+        const desc = getInputVal('desc');
+        const phone = getInputVal('phone');
+        const location = getInputVal('location');
+        saveMessage(name, title, desc, phone, location);
+        document.getElementById('contactForm').reset();
+      }
+
+      // Function to get form values
+      function getInputVal(id) {
+        return document.getElementById(id).value;
+      }
+
+      function saveMessage(name, title, desc, phone, location) {
+        const id = "id" + Math.random().toString(16).slice(2)
+        set(ref(messagesRef, `${id}/`), {
+          name: name,
+          title: title,
+          desc: desc,
+          phone: phone,
+          location: location,
+        });
+      }
+
+      const tasksRef = ref(messagesRef);
+      get(tasksRef)
+        .then((snapshot) => {
+          const data = snapshot.val();
+          const data_values = Object.values(data)
+          console.log(data_values)
+          const container = document.querySelector('.help-container');
+          function  renderProducts() {
+            let productListDomString = '';
+            data_values?.forEach(product => {
+                productListDomString += `<div class="col-6">
+                  <div class="card product">
+                    <div class="card-body d-flex flex-column">
+                      <h4 class="card-title">${product.title}</h4>
+                      <p class="card-text ">${product.desc}</p>
+                      <div class="d-flex justify-content-around">
+                         <div>Локація ${product.location}</div>
+                         <div>Телефон ${product.phone}</div>
+                      </div>
+                    </div>
+                  </div>
+                </div>`;
+              });
+            container.innerHTML = productListDomString;
+          }
+          renderProducts()
+        })
+        .catch((err) => {
+          console.error(err);
+        });
+    </script>
 </body>
 </html>
