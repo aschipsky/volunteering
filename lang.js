@@ -191,4 +191,24 @@ const langArr = {
         "ua" : "Детальніше",
         "en" : "More details",
     },
+    "title_fir" : {
+        "ua" : "Заголовок:",
+        "en" : "Title:",
+    },
+    "text_fir" : {
+        "ua" : "Текст*:",
+        "en" : "Text*:",
+    },
+    "location_fir" : {
+        "ua" : "Локація:",
+        "en" : "Location:",
+    },
+    "connection_fir" : {
+        "ua" : "Зв'язатися:",
+        "en" : "Get in touch:",
+    },
+    "buttom_fir" : {
+        "ua" : "Відправити",
+        "en" : "Send",
+    },
 }
