@@ -235,15 +235,17 @@ button.navbar-toggler .collapsed {
     background: rgba(217, 255, 0, 0.938);
 }
 
-select {
-    appearance: none;
-    border: none;
-    background-color: transparent;
-    outline: none;
-    padding: 2px 4px 2px 4px;
-    font-weight: bold;
+.language {
+    display: flex;
 }
 
+select.form-select {
+    background-color: #ffffff00;
+    border: none;
+    width: 70px;
+}
+
+ 
 form .card {
     background-color: transparent!important;
     color: white!important;
